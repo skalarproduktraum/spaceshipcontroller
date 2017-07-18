@@ -18,7 +18,16 @@
 
 ```
 
-## Setup	
+## Setup
+### Python
+
+SpaceshipController requires:
+
+* Python 3.6+
+* [PySerial](https://pythonhosted.org/pyserial/) (`pip3 install pyserial` or `conda install pyserial`)
+
+So far, it has only been tested on Windows, but should work on Linux/OSX as well.
+	
 ### Power
 The spaceship controller needs to be driven with at least 7.5V to the CAN bus connector in
 the back of the controller. 5V doesn't seem to be enough and the CAN bus spec declares anything
@@ -55,6 +64,11 @@ Buttons:
  * S5 - Camera
  * S6 - Minus
  * S7 - Plus
+ 
+## Running
+
+* Windows: `python spaceship.py COM1`, where COM1 is the port the controller is connected to.
+* Linux/OSX: `python spaceship.py /dev/ttyS1`, where `/dev/ttyS1` is the serial device the controller is connected to.
  
 ## More
 
